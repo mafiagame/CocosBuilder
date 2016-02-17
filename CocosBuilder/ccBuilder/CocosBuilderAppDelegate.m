@@ -1524,6 +1524,16 @@ static BOOL hideAllToNextSeparator;
 			break;
 		}
 	}
+    
+    if(! projectFile)
+    {
+        NSString* new_path = [path stringByDeletingLastPathComponent];
+        if(![new_path isEqualToString:@""] && ![new_path isEqualToString:path])
+        {
+            return [self findProject:new_path];
+        }
+    }
+    
 	return projectFile;
 }
 
