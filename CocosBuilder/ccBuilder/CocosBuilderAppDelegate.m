@@ -1275,6 +1275,11 @@ static BOOL hideAllToNextSeparator;
 
 - (BOOL) openProject:(NSString*) fileName
 {
+    // Check project already opened
+    if (self.projectSettings && [self.projectSettings.projectPath isEqualToString:fileName]) {
+        return YES;
+    }
+    
     // Close currently open project
     [self closeProject];
     
