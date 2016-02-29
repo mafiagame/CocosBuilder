@@ -370,12 +370,12 @@
     }
     [dict setObject:generatedSpriteSheetsDict forKey:@"generatedSpriteSheets"];
     
-    if (versionStr)
-    {
-        [dict setObject:versionStr forKey:@"versionStr"];
-    }
+//    if (versionStr)
+//    {
+//        [dict setObject:versionStr forKey:@"versionStr"];
+//    }
     
-    [dict setObject:[NSNumber numberWithBool:needRepublish] forKey:@"needRepublish"];
+    [dict setObject:[NSNumber numberWithBool:NO] forKey:@"needRepublish"];
     return dict;
 }
 
